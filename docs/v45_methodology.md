@@ -1,8 +1,10 @@
 # V4.5 Methodology Documentation
 
-## Overview
+## Theoretical Origin
 
-V4.5 is the result of collaborative iteration between Kimi (quantitative backtesting) and Gemini (3-round professional review). It corrects four critical flaws from V3:
+This system's core logic originates from **Fu Peng's (付鹏) "Shrinking Circle" (缩圈) theory and "Star Absorption" (吸星大法) framework**, which describes how capital in A-share markets exhibits a self-reinforcing concentration pattern: when a sector (especially AI/TMT) becomes the market's focal point, it continuously absorbs liquidity from other sectors (consumption, cyclicals), forming a "shrinking investment universe" — until the circle collapses under its own weight.
+
+This theory was first quantified into a monitoring system through iterative model optimization, with four critical refinements applied:
 
 1. Synthetic data → Real TMT ETF turnover data
 2. 252-day window → 756-day window (3-year medium cycle)
@@ -60,5 +62,7 @@ The Orange signal's "positive return trap" is the hardest psychological challeng
 ## Data Requirements
 
 - **Minimum history**: 756 trading days (~3 years) for accurate percentile calculation
-- **Current available**: ~481 days (2023.6-2025.6) from Yahoo Finance ETF data
+- **Current available**: ~725 days (2023.6-2026.6) from Yahoo Finance ETF data
+- **Gap to 756-day target**: ~31 days (will reach full target by late July 2026)
+- **Practical window**: Use all available ~725 days until 756-day threshold is reached
 - **Data sources**: Yahoo Finance (ETF + US tech), iFinD (A-share leaders), Exchange (margin data)
