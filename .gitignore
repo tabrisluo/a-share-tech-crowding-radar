@@ -27,6 +27,3 @@ npm-debug.log*
 *.csv
 *.xlsx
 *.parquet
-
-# Skill package (binary)
-# .skill-package/*.skill
